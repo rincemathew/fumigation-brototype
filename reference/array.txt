@@ -1,0 +1,777 @@
+3. Write a program to insert New value in the array (unsorted list ) in (specific position).
+
+#include <stdio.h>
+int main()
+{
+    int n,i,pos,g,a[20];
+    printf("enter th ramge;");
+    scanf("%d",&n);
+    printf("enter the values in the array");
+    for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+    printf("set the position to insert new value");
+    scanf("%d",&pos);
+    printf("enter the element");
+    scanf("%d",&g);
+    for(i=n-1;i>=pos-1;i--)
+    {
+        a[i+1]=a[i];
+        
+        
+    }a[pos-1]=g;
+    for(i=0;i<=n;i++)
+    printf("%d\n",a[i]);
+        return 0;
+}
+
+enter th ramge;6
+enter the values in the array
+12
+3
+2
+5
+3
+2
+set the position to insert new value4
+enter the element28
+12
+3
+2
+28
+5
+3
+2
+
+
+42. Write a program to insert New value in the array (sorted list
+
+#include <stdio.h>
+int main()
+{
+    int n,i,g,a[20],temp,j;
+    printf("enter th ramge;");
+    scanf("%d",&n);
+    printf("enter the values in the array");
+    for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+    printf("enter the element");
+    scanf("%d",&g);
+    
+     a[n]=g;
+     for(i=0;i<=n;i++)                                     
+    { 
+        printf("%d",a[i]);
+        
+    }printf("\n");
+    for(i=0;i<=n;++i)
+    {
+        for(j=i+1;j<=n;++j)
+        {
+       if(a[i]>a[j])
+       {
+           temp=a[i];
+           a[i]=a[j];
+           a[j]=temp;
+       }}}
+          for(i=0;i<=n;i++)
+          {
+          printf("%d\n",a[i]);
+       }
+   
+        return 0;
+}
+
+enter th ramge;5
+enter the values in the array1
+5
+74
+5
+2
+enter the element5
+1574525
+1
+2
+5
+5
+5
+74
+
+41. Write a program to separate odd and even integers in separate arrays.  
+
+#include <stdio.h>
+int main()
+{
+    int n,i,a[20],b[10],c[10],j=0,k=0;
+    printf("enter th ramge;");
+    scanf("%d",&n);
+    printf("enter the values in the array");
+    for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+    for(i=0;i<n;i++)
+    {
+    if(a[i]%2==0)
+    {
+       b[j]=a[i]; 
+       j++;
+    }
+    else
+    {
+      c[k]=a[i];
+      k++;
+    }}
+    printf("even array");
+    for(i=0;i<j;i++)
+    {
+    printf("%d ",b[i]);
+    }
+    printf("\n");
+    
+    printf("odd array");
+    for(i=0;i<k;i++)
+    {
+    printf("%d ",c[i]);
+    }
+    
+   
+        return 0;
+}
+
+enter th ramge;6
+enter the values in the array23 45 67 89 90 12
+even array90 12 
+odd array23 45 67 89 
+
+
+
+38. Write a program to merge two arrays of the same size sorted in descending order
+#include<stdio.h>
+
+int main()
+{
+    int count=0,i,j,n,temp;
+    int a[20],b[20],c[50];
+    printf("enter the size of the array\n");
+    scanf("%d",&n);
+    printf("enter first arrays\n");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+        count++;
+    }
+    printf("enter first arrays\n");
+     for(i=0;i<n;i++)
+    {
+        scanf("%d",&b[i]);
+        count++;
+    }
+    for(i=0;i<n;i++)
+    {
+        c[i]=a[i];
+    }
+    for(i=0,j=n;j<count&&i<n;i++,j++)
+    {
+        c[j]=b[i];
+    }
+    printf("the array is\n");
+    for(i=0;i<count;i++)
+    {
+        printf("%d ",c[i]);
+    }
+    printf("the sorted array is\n");
+    for(i=0;i<count;i++)
+    {
+        for(j=i+1;j<count;j++)
+        {
+            if(c[i]<c[j])
+            {
+            temp=c[i];
+            c[i]=c[j];
+            c[j]=temp;
+            }
+        }
+    }
+    for(i=0;i<count;i++)
+    {
+        printf("%d ",c[i]);
+    }
+    return 0;
+}
+
+enter the size of the array
+4
+enter first arrays
+2
+4
+5
+8
+enter first arrays
+4
+45
+2
+5
+the array is
+2 4 5 8 4 45 2 5 the sorted array is
+45 8 5 5 4 4 2 2
+
+37. Write a program to move all zeros to the end of an array
+
+#include<stdio.h>
+
+int main()
+{
+    int count=0,i,j,n,temp;
+    int a[20],b[20],c[50];
+    printf("enter the size of the array\n");
+    scanf("%d",&n);
+    printf("enter first arrays\n");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+       for(j=i+1;j<n;j++)
+       {.
+           if(a[i]==0)
+           {
+               temp=a[i];
+               a[i]=a[j];
+               a[j]=temp;
+           }
+       }
+    }
+    for(i=0;i<n;i++)
+    {
+        printf("%d",a[i]);
+    }
+    return 0;
+} 
+
+enter the size of the array
+9
+enter first arrays
+1
+2
+0
+5
+0
+5
+2
+0
+7
+725521000
+
+33. Write a program to read an array and count even and odd numbers in an array and also Print sum of the even numbers in an array.
+#include<stdio.h>
+
+int main()
+{
+    int i,j,n,sum1=0,sum2=0;
+    int a[20],even=0,odd=0;
+    printf("enter the size of the array\n");
+    scanf("%d",&n);
+    printf("enter first arrays\n");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        if(a[i]%2==0)
+        {
+            even++;
+        
+             sum1+=a[i]; 
+        }
+        else
+        {
+            odd++;
+             sum2+=a[i];
+        }
+        
+    }
+    printf("number of even number in the array :%d\n",even);
+    printf("number of odd number in the array :%d\n",odd);
+    printf("sum of even number :%d",sum1);
+     printf("sum of odd number :%d",sum2);
+    return 0;
+} 
+
+enter the size of the array
+9
+enter first arrays
+
+4
+7
+7
+4
+1
+5
+7
+4
+
+5
+number of even number in the array :3
+number of odd number in the array :6
+sum of even number :12sum of odd number :32      
+
+
+
+5. Write a program to print all unique elements in an array.
+
+#include <stdio.h>
+int main()
+{
+    int n,i,g,a[20],count,j;
+    printf("enter th ramge;");
+    scanf("%d",&n);
+    printf("enter the values in the array");
+    for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+    for(i=0;i<n;i++)
+    {
+        count=1;
+     
+        for(j=0;j<n;j++)
+        {
+           if(i!=j)
+           {
+               if(a[i]==a[j]) 
+               {
+                   count++;
+                   break;
+               }
+           }
+        }
+        if(count==1)
+        {   
+            printf(" %d ",a[i]);
+        }
+        
+    }
+    return 0;
+}
+
+enter th ramge;5
+enter the values in the array34 56 34 78 90
+ 56  78  90 
+
+5. Write a program to remove all prime numbers in an array.
+#include <stdio.h>
+int main()
+{
+    int size,pos,limit,flag,i,k;
+    printf("enter the size:");
+    scanf("%d",&size);
+    int array[size];
+    printf("enter the array1:");
+    for(i=0;i<size;i++){
+        scanf("%d",&array[i]);
+    } 
+    for(i=0;i<size;i++){
+        flag=0;
+        for(int j=2;j<array[i];j++){
+            if(array[i]%j==0){
+                flag=1;
+                break;              
+            }
+           
+        }
+ 
+        if(flag==0){
+           
+            printf("\nthe prime numbers are:");
+            printf("%d",array[i]);
+        for(k=i;k<size;k++){
+           array[k]=array[k+1];
+        }        
+        size--;
+        i--;
+    }   
+    }
+    printf("\n");
+    printf("after removal:");
+    for(int i=0;i<size;i++){
+        printf("%d ",array[i]);
+    }
+    return 0;
+}
+
+enter the size:5
+enter the array1:4
+7
+1
+5
+9
+the prime numbers are:7
+the prime numbers are:1
+the prime numbers are:5
+after removal:4 9 
+
+
+13. Write a program to insert a element in specified position in an array
+#include <stdio.h>
+int main()
+{
+    int n,i,g,a[20],j,k,pos,ele;
+    printf("enter th ramge;");
+    scanf("%d",&n);
+    printf("enter the values in the array");
+    for(i=0;i<n;i++)
+    {
+    scanf("%d",&a[i]);
+    }
+    printf("enter the position");
+    scanf("%d",&pos);
+    printf("enter the element");
+    scanf("%d",&ele);
+    for(i=n-1;i>=pos-1;i--)
+    {
+        a[i+1]=a[i];
+        a[pos-1]=ele;
+    }
+    printf("new array");
+    for(i=0;i<=n;i++)
+    {
+        printf("%d",a[i]);
+    }
+    return 0;
+}
+
+enter th ramge;5
+enter the values in the array
+
+5
+8
+9
+6
+3
+enter the position2
+enter the element8
+new array588963
+
+
+
+16. Write a program to sort an array and print the count of unique elements in the array
+
+#include <stdio.h>
+int main()
+{
+    int n,i,g,a[20],j,k,count=0,p=0;
+    printf("enter th ramge;");
+    scanf("%d",&n);
+    printf("enter the values in the array");
+    for(i=0;i<n;i++)
+    {
+    scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        count=0;
+        for(j=0;j<n;j++)
+        {
+            if(i!=j)
+        {
+            if(a[i]==a[j])
+            {
+                count++;
+                break;
+            }
+        }
+        }
+
+    if(count==0)
+    {
+        p++;
+        
+    }}
+    printf("no of unique elements");
+    printf("%d",p);
+    return 0;
+}
+
+enter th ramge;5
+enter the values in the array4
+5
+7
+5
+7
+no of unique elements1
+
+Write a program to print the sum of unique elements from an array
+#include <stdio.h>
+int main()
+{
+    int n,i,g,a[20],j,k,count=0,sum=0;
+    printf("enter th ramge;");
+    scanf("%d",&n);
+    printf("enter the values in the array");
+    for(i=0;i<n;i++)
+    {
+    scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        count=0;
+        for(j=0;j<n;j++)
+        {
+            if(i!=j)
+        {
+            if(a[i]==a[j])
+            {
+                count++;
+                break;
+            }
+        }
+        }
+
+    if(count==0)
+    {
+       sum+=a[i];
+        
+    }}
+    printf("sun of unique elements");
+    printf("%d",sum);
+    return 0;
+}
+
+enter th ramge;6
+enter the values in the array2
+5
+4
+2
+4
+2
+sun of unique elements5
+
+
+39. Write a program to count the frequency of each element of an array.
+#include <stdio.h>
+int main()
+{
+    int n,a[50],match[50],i,j,count,value=-1;
+    printf("enter size");
+    scanf("%d",&n);
+    printf("enter the array");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++) 
+    {
+        count=1;
+        for(j=i+1;j<n;j++)
+        {
+                if(a[i]==a[j])
+                {
+                    count++;
+                    match[j]=value;
+                }
+        }
+        if(match[i]!=value){
+            match[i]=count;
+        }
+    }
+    printf("the frequency of elements:");
+        for(i=0;i<n;i++){
+            if(match[i]!=value){
+                printf("%d-%d\n",a[i],match[i]);
+            }
+        }
+    return 0; 
+}
+
+35. Write a program to delete two elements after the occurrence of an even number
+#include<stdio.h>
+
+int main()
+{
+    int i,j,n,k;
+    int a[20],b[20],c[50];
+    printf("enter the size of the array\n");
+    scanf("%d",&n);
+    printf("enter first arrays\n");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        if(a[i]%2==0)
+        {
+           if(i==n-1)
+           n=n;
+           else if(i==n-2)
+               n=n-1;
+           else
+           {
+               for(k=i+1;k<n;k++)
+               {
+                   a[k]=a[k+2];
+                   a[k+1]=a[k+3];
+               }
+                n=n-2;           
+           }
+        }        
+    }
+    for(i=0;i<n;i++){
+        printf("%d",a[i]);
+    }
+    return 0;
+} 
+
+enter the size of the array
+8
+enter first arrays
+1
+4
+7
+8
+5
+6
+5
+4
+1456
+
+34. Write a program to sort an array and print the count of ‘1’ in the array
+#include<stdio.h>
+
+int main()
+{
+    int i,j,n,k,count=0,temp;
+    int a[20],b[20],c[50];
+    printf("enter the size of the array\n");
+    scanf("%d",&n);
+    printf("enter first arrays\n");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=i;j<n;j++)
+        {
+            if(a[i]>a[j])
+            {
+                temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+        }
+        if(a[i]==1)
+        {
+           count++;
+        }
+    }
+    printf("no of 1 in the array: %d \n",count);
+    for(i=0;i<n;i++)
+    {
+        printf("%d  ",a[i]);
+    }printf("sorted array");
+    
+    
+    return 0;
+} 
+
+
+enter the size of the array
+7
+enter first arrays
+4
+5
+8
+7
+2
+1
+1
+no of 1 in the array: 2 
+1124578sorted array
+
+31. Sort the array and replace elements in an odd position with * and remove prime numbers
+#include<stdio.h>
+
+int main()
+{
+    int count=0,i,j,n,temp,l=42;
+    int a[20],b[20],c[50];
+    printf("enter the size of the array\n");
+    scanf("%d",&n);
+    printf("enter first arrays\n");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+       for(j=i+1;j<n;j++)
+       {
+           if(a[i]<a[j])
+           {
+               temp=a[i];
+               a[i]=a[j];
+               a[j]=temp;
+           }
+       }
+    } 
+    for(i=0;i<n;i++){
+        int flag=0;
+        for(j=1;j<=a[i];j++){
+            if(a[i]%j==0){
+                flag++;
+            }
+        }
+        if(flag==0){
+            for(j=i;j<n;j++){
+                a[j]=a[j+1];
+            }
+            n--;
+            i--;
+            
+        }
+        
+        for(i=0;i<n;i++){
+        if(a[i]%2==1){
+            a[i]=l;
+        
+         printf("%c",a[i]);
+        }
+        else {
+            printf("%d",a[i]);
+        }
+        
+    }
+    }
+    return 0;
+} 
+
+28. How do you find all pairs of an integer array whose sum is equal to a given number?
+#include<stdio.h>
+
+int main()
+{
+    int count=0,i,j,n,value;
+    int a[20],b[20],c[50];
+    printf("enter the size of the array\n");
+    scanf("%d",&n);
+    printf("enter first arrays\n");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("enter a value");
+    scanf("%d",&value);
+    for(i=0;i<n;i++)
+    {
+    
+       for(j=0;j<n;j++)
+       {
+           if(a[i]+a[j]==value && i!=j){
+    
+               printf("%d %d\n",a[i],a[j]);
+           }
+       }
+    }
+           
+
+    return 0;
+}
