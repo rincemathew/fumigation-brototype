@@ -1,10 +1,20 @@
+// 1
+// 1 2 3
+// 22
+// 22
+// 4 5 6 7
+// 333
+// 333
+// 333
+// 8 9 10 11 12
+
 #include <stdio.h>
 
 
 int main () {
 
-    int count = 3, i, j;
-    int length = 12;
+    int count = 3, i, j, p=1;
+    int length = 12,count2=3;
 
     for (i=1; i<= count; i++)
     {
@@ -16,6 +26,15 @@ int main () {
             printf("\n");
         }
        }
+
+       for (j=1; j <= count2; j++)
+       {
+        printf("%d ",p);
+        p++;
+       }
+       count2++;
+       printf("\n");
+       
     }
     
 
