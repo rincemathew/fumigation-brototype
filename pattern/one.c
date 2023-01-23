@@ -7,10 +7,7 @@
 // 333
 // 333
 // 8 9 10 11 12
-
 #include <stdio.h>
-
-
 int main () {
 
     int count = 3, i, j, p=1;
@@ -26,17 +23,13 @@ int main () {
             printf("\n");
         }
        }
-
        for (j=1; j <= count2; j++)
        {
         printf("%d ",p);
         p++;
        }
        count2++;
-       printf("\n");
-       
+       printf("\n");    
     }
-    
-
     return 0;
 }
